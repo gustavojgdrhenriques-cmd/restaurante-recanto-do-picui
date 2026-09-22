@@ -1,0 +1,51 @@
+/* ===== reset.css ===== */
+
+/* 1. Reset Global e Box Model (Obrigatório) */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* 2. Fundações Visuais (Design System - Recanto do Picuí) */
+:root {
+    /* Paleta de Cores */
+    --cor-terracota: #A3392F;
+    --cor-dourado: #D89C48;
+    --cor-verde-sertao: #1B3626;
+    --cor-creme: #F4EFE6;
+    --cor-papel: #FFFFFF;
+
+    /* Tipografia (Fontes genéricas por enquanto, depois importamos as reais) */
+    --fonte-titulo: "Georgia", serif;
+    --fonte-texto: "Inter", "Arial", sans-serif;
+
+    /* Espaçamento - 8pt Grid */
+    --espaco-1: 8px;
+    --espaco-2: 16px;
+    --espaco-3: 24px;
+    --espaco-4: 32px;
+    --espaco-5: 40px;
+    --espaco-6: 48px;
+    --espaco-8: 64px;
+}
+
+/* 3. Estilos Base e Acessibilidade */
+body {
+    font-family: var(--fonte-texto);
+    background-color: var(--cor-creme);
+    color: var(--cor-verde-sertao);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+img {
+    max-width: 100%;
+    display: block; /* Remove o espaço fantasma embaixo das imagens */
+}
+
+button, a {
+    cursor: pointer;
+    font-family: inherit;
+    text-decoration: none;
+}
