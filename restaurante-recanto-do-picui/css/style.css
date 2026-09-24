@@ -147,3 +147,37 @@
 .btn-pedir:hover {
     opacity: 0.8;
 }
+
+.nossa-historia {
+    padding: var(--espaco-6) var(--espaco-4);
+    background-color: var(--cor-papel);
+    text-align: center;
+}
+
+.nossa-historia h2 {
+    font-family: var(--fonte-titulo);
+    font-size: 2.2rem;
+    color: var(--cor-terracota);
+    margin-bottom: var(--espaco-2);
+}
+
+.nossa-historia p {
+    max-width: 700px;
+    margin-inline: auto;
+    color: var(--cor-verde-sertao);
+    font-size: 1.1rem;
+    margin-bottom: var(--espaco-4);
+    line-height: 1.6;
+}
+
+.nossa-historia blockquote {
+    font-family: var(--fonte-titulo);
+    font-style:italic;
+    color: var(--cor-terracota);
+    font-size: 1.25rem;
+    max-width: 600px;
+    margin-inline: auto;
+    border-left: 4px solid var(--cor-terracota);
+    padding-left: var(--espaco-3);
+    text-align: left;
+}
