@@ -70,3 +70,80 @@
     background-color: var(--cor-verde-sertao);
     color: var(--cor-creme);
 }
+
+.sabores-casa {
+    padding: var(--espaco-6) var(--espaco-4);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.sabores-casa h2 {
+    font-family: var(--fonte-titulo);
+    font-size: 2.2rem;
+    color: var(--cor-terracota);
+    text-align: center;
+    margin-bottom: var(--espaco-2);
+}
+
+.sabores-casa > p{
+    text-align: center;
+    color: var(--cor-verde-sertao);
+    margin-bottom: var(--espaco-5);
+    font-size: 1.1rem;
+}
+
+.grade-pratos {
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--espaco-3);
+}
+
+.card-prato {
+    background-color: var(--cor-papel);
+    padding: var(--espaco-3);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: var(--espaco-2);
+}
+
+.card-imagem {
+    width: 100%;
+    height: 180px;
+    background-color: var(--cor-creme);
+    border-radius: 8px;
+}
+
+.card-prato h3 {
+    font-family: var(--fonte-titulo);
+    color: var(--cor-verde-sertao);
+    font-size: 1.25rem;
+}
+
+.card-prato p {
+    color: var(--cor-verde-sertao);
+    font-size: 0.95rem;
+    flex-grow: 1;
+}
+
+.preco {
+    font-weight: bold;
+    color: var(--cor-terracota);
+    font-size: 1.15rem;
+}
+
+.btn-pedir  {
+    display: inline-block;
+    padding: var(--espaco-1) var(--espaco-2);
+    background-color: var(--cor-terracota);
+    color: var(--cor-creme);
+    border-radius: 6px;
+    font-weight: bold;
+    text-align: center;
+    transition: opacity 0.3s ease;
+}
+
+.btn-pedir:hover {
+    opacity: 0.8;
+}
