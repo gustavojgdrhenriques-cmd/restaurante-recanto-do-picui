@@ -22,3 +22,51 @@
     gap: var(--espaco-3);
     list-style: none;
 }
+
+.hero {
+    padding: var(--espaco-8) var(--espaco-4);
+    text-align: center;
+    background-color: var(--cor-creme);
+}
+
+.hero h1 {
+    font-family: var(--fonte-titulo);
+    font-size: 3rem;
+    color: var(--cor-terracota);
+    margin-bottom: var(--espaco-2);
+}
+
+.hero p {
+    font-size: 1.25rem;
+    color: var(--cor-verde-sertao);
+    margin-bottom: var(--espaco-4);
+    max-width: 600px;
+    margin-inline: auto;
+}
+
+.hero-botoes {
+    display: flex;
+    justify-content: center; 
+    gap: var(--espaco-2);
+}
+
+.btn-primario, .btn-whatsapp {
+    padding: var(--espaco-2) var(--espaco-4);
+    border-radius: 8px;
+    font-weight: bold;
+    transition: opacity 0.3s ease;
+}
+
+.btn-primario:hover, .btn-whatsapp:hover {
+    opacity: 0.8
+}
+
+.btn-primario {
+    background-color: var(--cor-terracota);
+    color: var(--cor-creme);
+}
+
+.btn-whatsapp {
+    background-color: var(--cor-verde-sertao);
+    color: var(--cor-creme);
+}
