@@ -181,3 +181,30 @@
     padding-left: var(--espaco-3);
     text-align: left;
 }
+
+.contato {
+    padding: var(--espaco-6) var(--espaco-4);
+    background-color: var(--cor-creme);
+    text-align: center;
+    color: var(--cor-verde-sertao);
+}
+
+.contato h2 {
+    font-family: var(--fonte-titulo);
+    font-size: 2rem;
+    color: var(--cor-terracota);
+    margin-bottom: var(--espaco-2);
+}
+
+.contato p {
+    font-size: 1.1rem;
+    margin-bottom: var(--espaco-1);
+}
+
+.rodape {
+    padding: var(--espaco-3) var(--espaco-4);
+    background-color: var(--cor-verde-sertao);
+    color: var(--cor-creme);
+    text-align: center;
+    font-size: 0.9rem;
+}
