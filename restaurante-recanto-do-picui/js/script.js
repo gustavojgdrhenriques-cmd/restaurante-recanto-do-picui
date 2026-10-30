@@ -120,7 +120,7 @@ listaPedido.addEventListener('click', (evento) => {
     renderizarPedido();
     mensagemPedido.textContent = `${catalogo.get(removido).nome} removido do pedido.`;
     if (pedido.length) listaPedido.querySelector('.remover-item')?.focus();
-    else limparPedido.focus();
+    else pedidoVazio.focus();
 });
 
 limparPedido.addEventListener('click', () => {
