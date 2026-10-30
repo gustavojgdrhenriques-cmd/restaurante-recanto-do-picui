@@ -3,47 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recanto do Picuí - A tradição tem sabor</title>
-    
-    <!-- arquivos CSS (O Reset SEMPRE vem antes do Style) -->
-    <link rel="stylesheet" href="css/reset.css">
+    <title>Recanto do Picuí</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    
-    <!-- Cabeçalho Principal (Onde aplicaremos o Flexbox a seguir) -->
-    <header class="cabecalho-principal">
-        <nav class="navbar">
-            <a href="#" class="logo">
-                <span class="logo-rp">RP</span>
-                <span class="logo-texto">Recanto do Picuí</span>
-            </a>
 
+    <header class="cabecalho">
+        <div class="logo">Recanto do Picuí</div>
+        <nav>
             <ul class="menu">
-                <li><a href="#" class="ativo">Início</a></li>
+                <li><a href="#">Início</a></li>
                 <li><a href="#">Cardápio</a></li>
-                <li><a href="#">Nossa História</a></li>
-                <li><a href="#">Estrutura</a></li>
-                <li><a href="#">Localização</a></li>
+                <li><a href="#">História</a></li>
+                <li><a href="#">Contato</a></li>
             </ul>
-
         </nav>
+        <button class="menu-hamburguer" aria-label="Abrir menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </header>
 
-    <!-- Conteúdo Principal da Página -->
     <main>
-        <!-- Hero Section (Dobra principal: "Carne de sol, fartura e afeto...") -->
         <section class="hero">
-            <h1>Carne de Sol, fartura e afeto à mesa</h1>
-            <p>Comida regional feita para reunir a família, celebrar bons encontros e deixar vontade de voltar</p>
-
-            <div class="hero-botoes">
-                <a href="#" class="btn-primario">Ver o cardápio</a>
-                <a href="#" class="btn-whatsapp">Pedir no WhatsApp</a>
-            </div>
+            <h1>O Verdadeiro Sabor Nordestino em Campina Grande</h1>
+            <p>Carne de sol generosa, acompanhamentos tradicionais e a autêntica manteiga de garrafa.</p>
+            <a href="#" class="btn-primario">Ver Cardápio</a>
         </section>
 
-        <!-- Seção: Sabores que contam nossa história (Onde usaremos o CSS Grid) -->
         <section class="sabores-casa">
             <h2>Sabores que contam nossa história</h2>
             <p>Pratos generosos, acompanhamentos regionais e o sabor que tornou a casa uma referência em Campina Grande</p>
@@ -53,21 +41,23 @@
                     <div class="card-imagem"></div>
                     <h3>Carne de Sol da Casa</h3>
                     <p>Ingredientes: Macaxeira, feijão-verde, arroz, paçoca e vinagrete</p>
-                    <span class="preco"> R$79</span>
+                    <span class="preco">R$ 79</span>
                     <a href="#" class="btn-pedir">PEDIR</a>
                 </article>
+
                 <article class="card-prato">
                     <div class="card-imagem"></div>
                     <h3>Carne Vó Sinhá</h3>
-                    <p>Ingredientes: 600g de carne de sol (tradicionalmente grelhada na brasa antes do preparo) Manteiga de garrafa (a gosto, para refogar e finalizar)1 cebola média (cortada em cubos ou rodelas)2 tomates picados1 pimentão picadoAlho picado (a gosto)Pimenta-do-reino (a gosto)Sal (ajustado com cuidado, pois a carne já é cure-salgada)</p>
-                    <span class="preco"> R$89</span>
+                    <p>Ingredientes: 600g de carne de sol, Manteiga de garrafa, cebola, tomates, pimentão e alho</p>
+                    <span class="preco">R$ 89</span>
                     <a href="#" class="btn-pedir">PEDIR</a>
                 </article>
+
                 <article class="card-prato">
                     <div class="card-imagem"></div>
                     <h3>Batata Frita</h3>
-                    <p>Ingredientes: Batata e olho de soja</p>
-                    <span class="preco"> R$19,90</span>
+                    <p>Ingredientes: Batata e óleo de soja</p>
+                    <span class="preco">R$ 19,90</span>
                     <a href="#" class="btn-pedir">PEDIR</a>
                 </article>
             </div>
@@ -80,17 +70,18 @@
                 <p>"Reforçamos o compromisso com os ingredientes regionais e a manteiga de garrafa artesanal."</p>
             </blockquote>
         </section>
+
         <section class="contato">
             <h2>Venha nos visitar</h2>
-            <p>Rua Antônio Campos, 650 - Campina Grande, PB</p>
-            <p>De Segunda a Segunda: das 12h até as 15h</p>
+            <p>Rua Exemplo, 123 - Centro, Campina Grande - PB</p>
+            <p>Terça a Domingo, das 11h às 23h</p>
         </section>
     </main>
 
-    <!-- Rodapé -->
-    <footer class="rodape-principal">
+    <footer class="rodape">
         <p>&copy; 2026 Recanto do Picuí. Todos os direitos reservados.</p>
     </footer>
 
+    <script src="js/script.js"></script>
 </body>
 </html>
