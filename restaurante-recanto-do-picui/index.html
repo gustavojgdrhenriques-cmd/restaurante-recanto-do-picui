@@ -3,92 +3,173 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recanto do Picuí</title>
+    <meta name="description" content="Conheça os sabores nordestinos do Recanto do Picuí e monte uma simulação de pedido.">
+    <title>Recanto do Picuí | Sabores nordestinos</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="vendor/bootstrap/bootstrap.bundle.min.js" defer></script>
+    <script src="js/script.js" defer></script>
 </head>
 <body>
-
+    <!-- Acesso direto ao conteúdo: antes, usuários de teclado precisavam passar por todo o menu em cada visita. -->
+    <a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
     <header class="cabecalho">
-        <div class="logo">Recanto do Picuí</div>
-        <nav>
+        <a class="logo" href="#inicio" aria-label="Recanto do Picuí, voltar ao início">Recanto do Picuí</a>
+        <!-- O menu agora informa seu estado e o painel controlado às tecnologias assistivas. -->
+        <button class="menu-hamburguer" type="button" aria-label="Abrir menu" aria-controls="navegacao" aria-expanded="false">
+            <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
+        </button>
+        <nav id="navegacao" aria-label="Navegação principal">
             <ul class="menu">
-                <li><a href="#">Início</a></li>
-                <li><a href="#">Cardápio</a></li>
-                <li><a href="#">História</a></li>
-                <li><a href="#">Contato</a></li>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#cardapio">Cardápio</a></li>
+                <li><a href="#historia">História</a></li>
+                <li><a href="#pedido">Meu pedido <span id="contador-pedido" aria-label="0 itens">(0)</span></a></li>
+                <li><a href="#contato">Contato</a></li>
             </ul>
         </nav>
-        <button class="menu-hamburguer" aria-label="Abrir menu" aria-expanded="false">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
     </header>
-
-    <main>
-        <section class="hero">
-            <h1>O Verdadeiro Sabor Nordestino em Campina Grande</h1>
+    <main id="conteudo">
+        <section class="hero" id="inicio" aria-labelledby="titulo-principal">
+            <p class="sobretitulo">Tradição paraibana à mesa</p>
+            <h1 id="titulo-principal">O verdadeiro sabor nordestino em Campina Grande</h1>
             <p>Carne de sol generosa, acompanhamentos tradicionais e a autêntica manteiga de garrafa.</p>
-            <a href="#" class="btn-primario">Ver Cardápio</a>
+            <a href="#cardapio" class="btn-primario">Explorar cardápio</a>
         </section>
-
-        <section class="sabores-casa">
-            <h2>Sabores que contam nossa história</h2>
-            <p>Pratos generosos, acompanhamentos regionais e o sabor que tornou a casa uma referência em Campina Grande</p>
-
-            <div class="grade-pratos">
-                <article class="card-prato">
-                    <div class="card-imagem">
-                        <img src="assets/carne de sol.png" alt="Prato de Carne de Sol da Casa com acompanhamentos tradicionais">
+        <section class="sabores-casa" id="cardapio" aria-labelledby="titulo-cardapio">
+            <div class="secao-cabecalho">
+                <p class="sobretitulo">Nosso cardápio</p>
+                <h2 id="titulo-cardapio">Sabores que contam nossa história</h2>
+                <p>Pratos generosos e acompanhamentos regionais para conhecer a cozinha da casa.</p>
+            </div>
+            <div class="grade-pratos row g-4">
+                <div class="col-12 col-md-6 col-lg-4">
+                <article class="card-prato" data-prato="carne-sol" data-preco="7900">
+                    <img src="assets/carne de sol.png" alt="Carne de sol com acompanhamentos tradicionais" width="405" height="493" loading="lazy">
+                    <div class="card-conteudo">
+                        <h3>Carne de Sol da Casa</h3>
+                        <p>Macaxeira, feijão-verde, arroz, paçoca e vinagrete.</p>
+                        <!-- A ação era um link sem destino; botão semântico permite Enter e Espaço. -->
+                        <div class="card-rodape"><span class="preco">R$ 79,00</span><button class="btn-pedir" type="button">Adicionar ao pedido</button></div>
                     </div>
-                    <h3>Carne de Sol da Casa</h3>
-                    <p>Ingredientes: Macaxeira, feijão-verde, arroz, paçoca e vinagrete</p>
-                    <span class="preco">R$ 79</span>
-                    <a href="#" class="btn-pedir">PEDIR</a>
                 </article>
-
-                <article class="card-prato">
-                    <div class="card-imagem">
-                        <img src="assets/vo sinha.png" alt="Carne Vó Sinhá com manteiga de garrafa e acompanhamentos">
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                <article class="card-prato" data-prato="vo-sinha" data-preco="8900">
+                    <img src="assets/vo sinha.png" alt="Carne Vó Sinhá com manteiga de garrafa e acompanhamentos" width="412" height="492" loading="lazy">
+                    <div class="card-conteudo">
+                        <h3>Carne Vó Sinhá</h3>
+                        <p>Carne de sol com manteiga de garrafa, cebola, tomates, pimentão e alho.</p>
+                        <div class="card-rodape"><span class="preco">R$ 89,00</span><button class="btn-pedir" type="button">Adicionar ao pedido</button></div>
                     </div>
-                    <h3>Carne Vó Sinhá</h3>
-                    <p>Ingredientes: 600g de carne de sol, Manteiga de garrafa, cebola, tomates, pimentão e alho</p>
-                    <span class="preco">R$ 89</span>
-                    <a href="#" class="btn-pedir">PEDIR</a>
                 </article>
-
-                <article class="card-prato">
-                    <div class="card-imagem">
-                        <img src="assets/batata frita.png" alt="Porção de Batata Frita caseira crocante">
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                <article class="card-prato" data-prato="batata-frita" data-preco="1990">
+                    <img src="assets/batata frita.png" alt="Porção de batatas fritas crocantes" width="401" height="490" loading="lazy">
+                    <div class="card-conteudo">
+                        <h3>Batata Frita</h3>
+                        <p>Porção de batatas fritas, ideal para compartilhar.</p>
+                        <div class="card-rodape"><span class="preco">R$ 19,90</span><button class="btn-pedir" type="button">Adicionar ao pedido</button></div>
                     </div>
-                    <h3>Batata Frita</h3>
-                    <p>Ingredientes: Batata e óleo de soja</p>
-                    <span class="preco">R$ 19,90</span>
-                    <a href="#" class="btn-pedir">PEDIR</a>
                 </article>
+                </div>
             </div>
         </section>
-
-        <section class="nossa-historia">
-            <h2>Tradição que passa de geração em geração</h2>
-            <p>Fundado no coração de Campina Grande, o Recanto do Picuí nasceu do desejo de servir a verdadeira carne de sol nordestina, com generosidade em cada prato e aquele tempero caseiro que abraça a família.</p>
-            <blockquote>
-                <p>"Reforçamos o compromisso com os ingredientes regionais e a manteiga de garrafa artesanal."</p>
-            </blockquote>
+        <section class="pedido" id="pedido" aria-labelledby="titulo-pedido">
+            <div class="pedido-intro">
+                <p class="sobretitulo">Monte sua escolha</p>
+                <h2 id="titulo-pedido">Meu pedido</h2>
+                <p>Esta é uma simulação para o projeto acadêmico. Os itens ficam salvos apenas neste navegador; nenhum pedido é enviado ao restaurante.</p>
+                <button class="btn-secundario ajuda-pedido" type="button" data-bs-toggle="modal" data-bs-target="#modal-ajuda">Como funciona?</button>
+            </div>
+            <div class="pedido-painel">
+                <p id="pedido-vazio">Seu pedido está vazio. Escolha um prato no cardápio.</p>
+                <ul id="lista-pedido" aria-label="Itens do pedido"></ul>
+                <div class="pedido-total"><span>Total estimado</span><strong id="total-pedido">R$ 0,00</strong></div>
+                <button id="limpar-pedido" class="btn-secundario" type="button" disabled>Limpar pedido</button>
+            </div>
+            <p id="mensagem-pedido" class="sr-only" role="status" aria-live="polite"></p>
         </section>
-
-        <section class="contato">
-            <h2>Venha nos visitar</h2>
-            <p>Rua Exemplo, 123 - Centro, Campina Grande - PB</p>
-            <p>Terça a Domingo, das 11h às 23h</p>
+        <section class="nossa-historia" id="historia" aria-labelledby="titulo-historia">
+            <div class="historia-conteudo">
+                <svg class="icone-historia" viewBox="0 0 100 100" role="img" aria-labelledby="titulo-icone-historia">
+                    <title id="titulo-icone-historia">Sol sobre um prato, símbolo da tradição nordestina</title>
+                    <circle cx="50" cy="40" r="16" fill="#b6522e"></circle>
+                    <path d="M 50 9 V 17 M 21 38 H 29 M 71 38 H 79 M 30 17 L 36 23 M 70 17 L 64 23" stroke="#b6522e" stroke-width="4" stroke-linecap="round"></path>
+                    <ellipse cx="50" cy="66" rx="36" ry="16" fill="none" stroke="#244638" stroke-width="5"></ellipse>
+                    <ellipse cx="50" cy="66" rx="23" ry="9" fill="none" stroke="#244638" stroke-width="3"></ellipse>
+                </svg>
+                <p class="sobretitulo">Nossa história</p>
+                <h2 id="titulo-historia">Um pouquinho da nossa história</h2>
+                <p>A tradição da carne de sol de Picuí atravessa gerações. O teaser abaixo reúne imagens e relatos sobre essa trajetória e a cozinha que inspira o nosso cardápio.</p>
+                <figure class="video-historia">
+                    <video controls preload="metadata" poster="assets/historia-poster.jpg" aria-label="Teaser do documentário A Rota da Carne de Sol de Picuí">
+                        <source src="assets/historia-picui.mp4" type="video/mp4">
+                        <source src="assets/historia-picui.webm" type="video/webm">
+                        Seu navegador não reproduz este vídeo.
+                    </video>
+                    <figcaption>Teaser do documentário <cite>A Rota da Carne de Sol de Picuí</cite>. <a href="https://www.youtube.com/watch?v=YCRXQQHf2Kw" target="_blank" rel="noopener noreferrer">Ver o vídeo original no YouTube</a>.</figcaption>
+                </figure>
+            </div>
+        </section>
+        <section class="avaliacao" aria-labelledby="titulo-avaliacao">
+            <div class="avaliacao-conteudo">
+                <p class="sobretitulo">Sua opinião</p>
+                <h2 id="titulo-avaliacao">Como você avalia a apresentação do cardápio?</h2>
+                <p>Escolha de 1 a 5 estrelas. A nota fica salva somente neste navegador, como demonstração do projeto.</p>
+                <form id="form-avaliacao">
+                    <fieldset>
+                        <legend>Selecione sua nota</legend>
+                        <div class="estrelas">
+                            <input type="radio" id="nota-1" name="nota" value="1" required><label for="nota-1"><span aria-hidden="true">★</span><span class="sr-only">1 estrela</span></label>
+                            <input type="radio" id="nota-2" name="nota" value="2"><label for="nota-2"><span aria-hidden="true">★</span><span class="sr-only">2 estrelas</span></label>
+                            <input type="radio" id="nota-3" name="nota" value="3"><label for="nota-3"><span aria-hidden="true">★</span><span class="sr-only">3 estrelas</span></label>
+                            <input type="radio" id="nota-4" name="nota" value="4"><label for="nota-4"><span aria-hidden="true">★</span><span class="sr-only">4 estrelas</span></label>
+                            <input type="radio" id="nota-5" name="nota" value="5"><label for="nota-5"><span aria-hidden="true">★</span><span class="sr-only">5 estrelas</span></label>
+                        </div>
+                    </fieldset>
+                    <button class="btn-primario" type="submit">Salvar minha nota</button>
+                </form>
+                <p id="resultado-avaliacao" role="status" aria-live="polite"></p>
+            </div>
+        </section>
+        <section class="contato" id="contato" aria-labelledby="titulo-contato">
+            <p class="sobretitulo">Participe da demonstração</p>
+            <h2 id="titulo-contato">Sua sugestão para o cardápio</h2>
+            <p>Experimente o formulário da demonstração. A sugestão aparece nesta página e não é enviada pela internet.</p>
+            <!-- Cada campo tem label associado por for/id para anunciar sua finalidade ao receber foco. -->
+            <form id="form-sugestao">
+                <div class="campo"><label for="nome">Seu nome</label><input id="nome" name="nome" type="text" autocomplete="name" maxlength="60" required></div>
+                <div class="campo"><label for="prato-sugerido">Prato sugerido</label><input id="prato-sugerido" name="prato" type="text" maxlength="80" required></div>
+                <div class="campo"><label for="detalhes">Por que ele combina com o cardápio?</label><textarea id="detalhes" name="detalhes" rows="4" maxlength="300" required></textarea></div>
+                <button class="btn-primario" type="submit">Visualizar sugestão</button>
+            </form>
+            <div id="resultado-sugestao" class="resultado-sugestao" hidden aria-live="polite">
+                <h3>Sugestão preparada</h3>
+                <p><strong>Nome:</strong> <span id="sugestao-nome"></span></p>
+                <p><strong>Prato:</strong> <span id="sugestao-prato"></span></p>
+                <p><strong>Motivo:</strong> <span id="sugestao-detalhes"></span></p>
+            </div>
         </section>
     </main>
-
-    <footer class="rodape">
-        <p>&copy; 2026 Recanto do Picuí. Todos os direitos reservados.</p>
-    </footer>
-
-    <script src="js/script.js"></script>
+    <div class="modal fade" id="modal-ajuda" tabindex="-1" aria-labelledby="titulo-modal-ajuda" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title fs-5" id="titulo-modal-ajuda">Como funciona o pedido?</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Escolha os pratos no cardápio. Eles aparecem em “Meu pedido” com o total estimado. Você pode remover itens ou limpar a lista; sua escolha permanece neste navegador após recarregar.</p>
+                    <p>Esta página é um projeto acadêmico. Ela não envia pedidos nem realiza pagamentos.</p>
+                </div>
+                <div class="modal-footer"><button type="button" class="btn-secundario" data-bs-dismiss="modal">Entendi</button></div>
+            </div>
+        </div>
+    </div>
+    <footer class="rodape"><p>© 2026 Recanto do Picuí. Projeto acadêmico de desenvolvimento front-end.</p></footer>
 </body>
 </html>
