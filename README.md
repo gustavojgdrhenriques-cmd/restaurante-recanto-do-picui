@@ -1,3 +1,3 @@
 Cardápio do restaurante Recanto do Picuí
 
-O HTML do projeto é bem estruturado e organizado, as sections são divididas por ID's, o fluxo do código segue um bom padrão, o formulário tem labels para acessibilidade e o projeto agora tem um vídeo com duas sources, cada uma em um formato diferente conforme pedido na atividade 4.m **100/100 antes e depois**; os detalhes e limites do resultado estão no registro de acessibilidade. A publicação, o teste no endereço público e os nomes de branch/PR exigidos por aulas específicas ainda precisam ser registrados com evidências reais nas respectivas entregas.
+O HTML do projeto é bem estruturado e organizado, as sections são divididas por ID's, o fluxo do código segue um bom padrão, o formulário tem labels para acessibilidade e o projeto agora tem um vídeo com duas sources, cada uma em um formato diferente conforme pedido na atividade 4
