@@ -1,74 +1,113 @@
-.navbar {
+:root {
+    --cor-terracota: #A8321C;
+    --cor-dourado: #D4AF37;
+    --cor-verde-sertao: #2C4A3E;
+    --cor-creme: #FDFBF7;
+    --cor-papel: #F4EEDC;
+    --fonte-titulo: "Georgia", serif;
+    --fonte-corpo: "Inter", sans-serif;
+    --espaco-1: 0.5rem;
+    --espaco-2: 1rem;
+    --espaco-3: 1.5rem;
+    --espaco-4: 2rem;
+    --espaco-5: 3rem;
+    --espaco-6: 4rem;
+}
+
+body {
+    font-family: var(--fonte-corpo);
+    background-color: var(--cor-creme);
+    color: var(--cor-verde-sertao);
+    line-height: 1.6;
+}
+
+.cabecalho {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: var(--espaco-2) var(--espaco-4);
-    background-color: var(--cor-creme);
+    background-color: var(--cor-papel);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 .logo {
-    display: flex;
-    align-items: center;
-    gap: var(--espaco-2);
-    text-decoration: none;
     font-family: var(--fonte-titulo);
-    font-size: 1.5rem;
+    font-size: 1.25rem;
+    font-weight: bold;
     color: var(--cor-terracota);
 }
 
 .menu {
     display: flex;
-    align-items: center;
     gap: var(--espaco-3);
     list-style: none;
 }
 
+.menu a {
+    color: var(--cor-verde-sertao);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.menu a:hover {
+    color: var(--cor-terracota);
+}
+
+.menu-hamburguer {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.menu-hamburguer span {
+    width: 24px;
+    height: 3px;
+    background-color: var(--cor-verde-sertao);
+}
+
 .hero {
-    padding: var(--espaco-8) var(--espaco-4);
+    padding: var(--espaco-6) var(--espaco-4);
     text-align: center;
-    background-color: var(--cor-creme);
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--espaco-3);
 }
 
 .hero h1 {
     font-family: var(--fonte-titulo);
-    font-size: 3rem;
+    font-size: 2.75rem;
     color: var(--cor-terracota);
-    margin-bottom: var(--espaco-2);
+    line-height: 1.2;
 }
 
 .hero p {
-    font-size: 1.25rem;
+    font-size: 1.15rem;
     color: var(--cor-verde-sertao);
-    margin-bottom: var(--espaco-4);
-    max-width: 600px;
-    margin-inline: auto;
-}
-
-.hero-botoes {
-    display: flex;
-    justify-content: center; 
-    gap: var(--espaco-2);
-}
-
-.btn-primario, .btn-whatsapp {
-    padding: var(--espaco-2) var(--espaco-4);
-    border-radius: 8px;
-    font-weight: bold;
-    transition: opacity 0.3s ease;
-}
-
-.btn-primario:hover, .btn-whatsapp:hover {
-    opacity: 0.8
 }
 
 .btn-primario {
+    display: inline-block;
+    padding: var(--espaco-2) var(--espaco-4);
     background-color: var(--cor-terracota);
     color: var(--cor-creme);
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
 }
 
-.btn-whatsapp {
-    background-color: var(--cor-verde-sertao);
-    color: var(--cor-creme);
+.btn-primario:hover {
+    opacity: 0.85;
 }
 
 .sabores-casa {
@@ -85,7 +124,7 @@
     margin-bottom: var(--espaco-2);
 }
 
-.sabores-casa > p{
+.sabores-casa > p {
     text-align: center;
     color: var(--cor-verde-sertao);
     margin-bottom: var(--espaco-5);
@@ -93,7 +132,7 @@
 }
 
 .grade-pratos {
-    display:grid;
+    display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: var(--espaco-3);
 }
@@ -133,7 +172,7 @@
     font-size: 1.15rem;
 }
 
-.btn-pedir  {
+.btn-pedir {
     display: inline-block;
     padding: var(--espaco-1) var(--espaco-2);
     background-color: var(--cor-terracota);
@@ -141,6 +180,7 @@
     border-radius: 6px;
     font-weight: bold;
     text-align: center;
+    text-decoration: none;
     transition: opacity 0.3s ease;
 }
 
@@ -172,7 +212,7 @@
 
 .nossa-historia blockquote {
     font-family: var(--fonte-titulo);
-    font-style:italic;
+    font-style: italic;
     color: var(--cor-terracota);
     font-size: 1.25rem;
     max-width: 600px;
