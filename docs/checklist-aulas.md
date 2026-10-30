@@ -18,6 +18,6 @@ Este quadro separa critérios verificáveis no código dos que exigem um Pull Re
 | 12 — Bootstrap | Bundle local, modal funcional, colunas com breakpoints, pedido anterior preservado, sem `!important`. | PR na branch `feature/bootstrap-integracao`, se esta for a entrega da Aula 12. |
 | 13 — Prompt/IA | Registro de duas solicitações reais e comparação das versões; estrelas em stack vanilla e operáveis por teclado. | A rubrica pede dois resultados independentes para o mesmo componente no PR `feature/componente-ia`; esse experimento não foi apresentado como concluído. |
 | 14 — Acessibilidade | Lighthouse local 100/100 antes e depois; seis correções registradas; Axe sem violações detectadas; foco e semântica testados. | PR da aula em `feature/acessibilidade` com a auditoria documentada. |
-| 15 — Deploy | Workflow Pages preparado para a subpasta; teste local em subcaminho sem 404; caminhos relativos. | Ativar Pages, publicar `main`, verificar URL, HTTPS e todas as funções no site público; então documentar o link funcional. |
+| 15 — Deploy | [Site público por HTTPS](https://gustavojgdrhenriques-cmd.github.io/restaurante-recanto-do-picui/), workflow da subpasta, caminhos relativos e teste no endereço publicado sem 404. | Registrar a URL e as evidências no PR da atividade específica da Aula 15. |
 
 Os requisitos de branch pertencem a entregas de aulas diferentes. Uma única branch de revisão geral não substitui esses PRs individuais. As pontuações e observações acima refletem testes locais, não uma avaliação oficial do professor ou de colegas.
